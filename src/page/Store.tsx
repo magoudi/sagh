@@ -1,6 +1,6 @@
 import Grid from "@mui/material/Grid2";
 import logo from "../assets/images/logo.png";
-import { Card, CardMedia, Typography } from "@mui/material";
+import { CardMedia, Typography } from "@mui/material";
 import vid from "../assets/videos/dior.mp4";
 
 const items = [
