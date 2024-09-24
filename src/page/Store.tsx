@@ -3,7 +3,6 @@ import logo from "../assets/images/logo.png";
 import { Box, CardMedia, Typography } from "@mui/material";
 import vid from "../assets/videos/dior.mp4";
 import prototype from "../assets/images/prototype.jpeg";
-import { useEffect, useRef } from "react";
 
 const items = [
   {
