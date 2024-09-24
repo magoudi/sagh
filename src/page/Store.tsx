@@ -31,6 +31,7 @@ const items = [
 function Store() {
   try {
     document.getElementById("video")?.setAttribute("allowFullScreen", "false");
+    document.getElementById("video")?.setAttribute("autoPlay", "true");
   } catch (e) {
     console.log(e);
   }
@@ -62,7 +63,6 @@ function Store() {
                   component="video"
                   autoPlay
                   loop
-                  controls={false}
                 />
               </Grid>
               <Grid size={{ xs: 12, sm: 4 }} padding={"20px"}>
