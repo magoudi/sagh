@@ -58,12 +58,13 @@ function Store() {
                 </Typography>
               </Grid>
             </Grid>
-            <Grid size={12} textAlign={"center"} margin={"40px"}>
+            <Grid size={12} textAlign={"center"}>
               <Typography
                 fontSize={"1em"}
                 align="center"
                 color="secondary"
                 fontWeight={500}
+                margin={"40px"}
               >
                 Photos
               </Typography>
