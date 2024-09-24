@@ -13,7 +13,6 @@ const theme = createTheme({
       light: "#FfD000",
       dark: "#877007",
     },
-    
   },
   typography: {
     fontFamily: "Libre Baskerville",
@@ -26,7 +25,7 @@ function App() {
       <ThemeProvider theme={theme}>
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Navs />}>
+            <Route path="/sagh" element={<Navs />}>
               <Route path="" element={<Store />} />
             </Route>
           </Routes>
