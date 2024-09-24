@@ -32,9 +32,9 @@ function Store() {
         </Grid>
 
         {items.map((item, idx) => (
-          <>
+          <div key={idx}>
             <Grid container alignItems={"center"}>
-              <Grid size={{ xs: 12, md: 8 }} key={idx}>
+              <Grid size={{ xs: 12, md: 8 }}>
                 <CardMedia src={item.video} component="video" autoPlay loop />
               </Grid>
               <Grid size={{ xs: 12, sm: 4 }} padding={"20px"}>
@@ -73,7 +73,7 @@ function Store() {
                 <CardMedia image={image} component="img" />
               </Grid>
             ))}
-          </>
+          </div>
         ))}
       </Grid>
     </>
