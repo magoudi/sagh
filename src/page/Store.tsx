@@ -3,6 +3,7 @@ import logo from "../assets/images/logo.png";
 import { Box, CardMedia, Typography } from "@mui/material";
 import vid from "../assets/videos/dior.mp4";
 import prototype from "../assets/images/prototype.jpeg";
+import { useEffect, useRef } from "react";
 
 const items = [
   {
@@ -29,6 +30,12 @@ const items = [
 ];
 
 function Store() {
+  try {
+    document.getElementById("video")?.setAttribute("allowFullScreen", "false");
+  } catch (e) {
+    console.log(e);
+  }
+
   return (
     <>
       <Grid container>
@@ -50,7 +57,14 @@ function Store() {
           <div key={idx}>
             <Grid container alignItems={"center"}>
               <Grid size={{ xs: 12, md: 8 }}>
-                <CardMedia src={item.video} component="video" autoPlay loop controls={false} />
+                <CardMedia
+                  id="video"
+                  src={item.video}
+                  component="video"
+                  autoPlay
+                  loop
+                  controls={false}
+                />
               </Grid>
               <Grid size={{ xs: 12, sm: 4 }} padding={"20px"}>
                 <Typography
