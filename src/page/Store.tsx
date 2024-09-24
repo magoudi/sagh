@@ -29,13 +29,6 @@ const items = [
 ];
 
 function Store() {
-  try {
-    document.getElementById("video")?.setAttribute("allowFullScreen", "false");
-    document.getElementById("video")?.setAttribute("autoPlay", "true");
-  } catch (e) {
-    console.log(e);
-  }
-
   return (
     <>
       <Grid container>
@@ -57,9 +50,18 @@ function Store() {
           <div key={idx}>
             <Grid container alignItems={"center"}>
               <Grid size={{ xs: 12, md: 8 }}>
-                <CardMedia component="video" autoPlay loop controls={false}>
-                  <source src={item.video} />
-                </CardMedia>
+                {/* <CardMedia component="video" loop preload="mp4" muted autoPlay >
+                  <source src={item.video} type="video/mp4" />
+                </CardMedia> */}
+                <video
+                  src={item.video}
+                  width={"100%"}
+                  height={"100%"}
+                  playsInline
+                  autoPlay
+                  loop
+                  muted
+                />
               </Grid>
               <Grid size={{ xs: 12, sm: 4 }} padding={"20px"}>
                 <Typography
