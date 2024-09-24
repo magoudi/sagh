@@ -58,7 +58,7 @@ function Store() {
                 </Typography>
               </Grid>
             </Grid>
-
+            <></>
             <Grid size={12} textAlign={"center"} margin={"40px"}>
               <Typography
                 fontSize={"1em"}
