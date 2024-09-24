@@ -1,10 +1,24 @@
 import Grid from "@mui/material/Grid2";
 import logo from "../assets/images/logo.png";
-import { CardMedia, Typography } from "@mui/material";
+import { Box, CardMedia, Typography } from "@mui/material";
 import vid from "../assets/videos/dior.mp4";
 import prototype from "../assets/images/prototype.jpeg";
 
 const items = [
+  {
+    video: vid,
+    images: [prototype, prototype],
+    name: "Batates",
+    description:
+      " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis sint a accusantium, deleniti dicta expedita. Aliquid ipsam reprehenderit ipsa quod corporis nesciunt eveniet, laboriosam, voluptatem a perferendis reiciendis. Dolore, maiores.",
+  },
+  {
+    video: vid,
+    images: [prototype, prototype],
+    name: "Batates",
+    description:
+      " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis sint a accusantium, deleniti dicta expedita. Aliquid ipsam reprehenderit ipsa quod corporis nesciunt eveniet, laboriosam, voluptatem a perferendis reiciendis. Dolore, maiores.",
+  },
   {
     video: vid,
     images: [prototype, prototype],
@@ -81,6 +95,9 @@ function Store() {
                   <CardMedia image={image} component="img" />
                 </Grid>
               ))}
+            </Grid>
+            <Grid size={12}>
+              <Box height={"116px"} />
             </Grid>
           </div>
         ))}
