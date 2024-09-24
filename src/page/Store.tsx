@@ -57,13 +57,9 @@ function Store() {
           <div key={idx}>
             <Grid container alignItems={"center"}>
               <Grid size={{ xs: 12, md: 8 }}>
-                <CardMedia
-                  id="video"
-                  src={item.video}
-                  component="video"
-                  autoPlay
-                  loop
-                />
+                <CardMedia component="video" autoPlay loop controls={false}>
+                  <source src={item.video} />
+                </CardMedia>
               </Grid>
               <Grid size={{ xs: 12, sm: 4 }} padding={"20px"}>
                 <Typography
