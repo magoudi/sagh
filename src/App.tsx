@@ -26,7 +26,7 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/sagh">
-              <Route path="/" element={<Navs />}>
+              <Route path="" element={<Navs />}>
                 <Route path="" element={<Store />} />
               </Route>
             </Route>
