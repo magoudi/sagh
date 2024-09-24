@@ -5,6 +5,7 @@ import {
   Drawer,
   IconButton,
   styled,
+  Switch,
   TextField,
   Toolbar,
   Typography,
@@ -64,10 +65,96 @@ const signupvalidationSchema = yup.object().shape({
     .required("Required"),
 });
 
-const Menu = () => {
+const Menu = (props: { set: any; set1: any }) => {
+  const navigate = useNavigate();
   return (
-    <Grid container width={{ xs: "100vw", sm: 200, md: 300 }}>
-      <Grid size={{ xs: 12, md: 12 }}>ay 7aga</Grid>
+    <Grid
+      container
+      width={{ xs: "100vw", sm: 200, md: 300 }}
+      sx={{ padding: "20px 0" }}
+    >
+      <Grid size={12} marginBottom={"20px"} sx={{ padding: "0 10px" }}>
+        <div style={{ display: "flex", alignItems: "center" }}>
+          <IconButton sx={{ padding: 0 }} onClick={() => props.set(false)}>
+            <CloseIcon color="secondary" fontSize="large" />
+          </IconButton>
+          <Typography fontSize="20px" color="secondary">
+            Close
+          </Typography>
+        </div>
+      </Grid>
+      <Grid
+        size={12}
+        sx={{
+          "&:hover": { backgroundColor: "#eee" },
+        }}
+        padding={"0 10px"}
+      >
+        <Typography
+          fontSize="30px"
+          variant="h2"
+          fontWeight={700}
+          height={"60px"}
+          color="secondary"
+          alignContent={"center"}
+          onClick={() => {
+            navigate("/sagh/");
+            props.set(false);
+          }}
+        >
+          Shop
+        </Typography>
+      </Grid>
+      <Grid
+        size={12}
+        sx={{
+          "&:hover": { backgroundColor: "#eee" },
+        }}
+        padding={"0 10px"}
+      >
+        <Typography
+          fontSize="30px"
+          variant="h2"
+          fontWeight={700}
+          height={"60px"}
+          color="secondary"
+          alignContent={"center"}
+          onClick={() => {
+            navigate("/sagh/about");
+            props.set(false);
+          }}
+        >
+          About Us
+        </Typography>
+      </Grid>
+      <Grid
+        size={12}
+        sx={{
+          "&:hover": { backgroundColor: "#eee" },
+        }}
+        padding={"0 10px"}
+      >
+        <Typography
+          fontSize="30px"
+          variant="h2"
+          fontWeight={700}
+          height={"60px"}
+          color="secondary"
+          alignContent={"center"}
+          onClick={() => {
+            navigate("/sagh/materials");
+            props.set(false);
+          }}
+        >
+          Our Materials
+        </Typography>
+      </Grid>
+      <Grid size={12} marginTop={"auto"}>
+        <Switch
+          color="secondary"
+          onChange={(e) => props.set1(e.target.checked)}
+        />
+      </Grid>
     </Grid>
   );
 };
@@ -327,9 +414,10 @@ const Account = (props: { set: any }) => {
   );
 };
 
-function Header() {
+function Header(props: { set: (value: boolean) => void }) {
   const [open, setOpen] = useState(false);
   const [open1, setOpen1] = useState(false);
+  const navigate = useNavigate();
   return (
     <>
       <AppBar
@@ -355,7 +443,7 @@ function Header() {
               </IconButton>
             </Grid>
             <Grid size={{ xs: 2, sm: 4 }} />
-            <Grid size={{ xs: 6, sm: 2 }}>
+            <Grid size={{ xs: 6, sm: 2 }} onClick={() => navigate("/sagh/")}>
               <Typography
                 variant="h1"
                 fontSize="32px"
@@ -378,7 +466,7 @@ function Header() {
         </Toolbar>
       </AppBar>
       <Drawer open={open} onClose={() => setOpen(false)}>
-        <Menu />
+        <Menu set={setOpen} set1={props.set} />
       </Drawer>
       <Drawer anchor="right" open={open1} onClose={() => setOpen1(false)}>
         <Account set={setOpen1} />

@@ -1,16 +1,16 @@
-import Grid from "@mui/material/Grid2"
-import Header from "../components/header"
-import { Outlet } from "react-router-dom"
+import Grid from "@mui/material/Grid2";
+import Header from "../components/header";
+import { Outlet } from "react-router-dom";
 
-function Navs() {
+function Navs(props: { set: (value: boolean) => void }) {
   return (
     <>
-    <Header />
-    <Grid container width={"100vw"}>
+      <Header set={props.set} />
+      <Grid container width={"100vw"}>
         <Outlet />
-    </Grid>
+      </Grid>
     </>
-  )
+  );
 }
 
-export default Navs
+export default Navs;
