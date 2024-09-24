@@ -50,7 +50,7 @@ function Store() {
           <div key={idx}>
             <Grid container alignItems={"center"}>
               <Grid size={{ xs: 12, md: 8 }}>
-                <CardMedia src={item.video} component="video" autoPlay loop />
+                <CardMedia src={item.video} component="video" autoPlay loop controls={false} />
               </Grid>
               <Grid size={{ xs: 12, sm: 4 }} padding={"20px"}>
                 <Typography
