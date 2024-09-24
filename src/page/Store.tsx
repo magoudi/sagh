@@ -2,11 +2,12 @@ import Grid from "@mui/material/Grid2";
 import logo from "../assets/images/logo.png";
 import { CardMedia, Typography } from "@mui/material";
 import vid from "../assets/videos/dior.mp4";
+import prototype from "../assets/images/prototype.jpeg";
 
 const items = [
   {
     video: vid,
-    images: [logo, logo],
+    images: [prototype, prototype],
     name: "Batates",
     description:
       " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis sint a accusantium, deleniti dicta expedita. Aliquid ipsam reprehenderit ipsa quod corporis nesciunt eveniet, laboriosam, voluptatem a perferendis reiciendis. Dolore, maiores.",
@@ -69,11 +70,18 @@ function Store() {
                 Photos
               </Typography>
             </Grid>
-            {item.images.map((image, idx) => (
-              <Grid size={{ xs: 12, md: 6 }} key={idx}>
-                <CardMedia image={image} component="img" />
-              </Grid>
-            ))}
+            <Grid
+              container
+              columnSpacing={"40px"}
+              justifyContent={"center"}
+              padding={{ xs: 0, md: "0 40px" }}
+            >
+              {item.images.map((image, idx) => (
+                <Grid size={{ xs: 12, md: 6 }} key={idx}>
+                  <CardMedia image={image} component="img" />
+                </Grid>
+              ))}
+            </Grid>
           </div>
         ))}
       </Grid>
