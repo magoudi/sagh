@@ -3,6 +3,7 @@ import logo from "../assets/images/logo.png";
 import { Box, CardMedia, Typography } from "@mui/material";
 import vid from "../assets/videos/dior.mp4";
 import prototype from "../assets/images/prototype.jpeg";
+import { useRef } from "react";
 
 const items = [
   {
@@ -27,8 +28,13 @@ const items = [
       " Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis sint a accusantium, deleniti dicta expedita. Aliquid ipsam reprehenderit ipsa quod corporis nesciunt eveniet, laboriosam, voluptatem a perferendis reiciendis. Dolore, maiores.",
   },
 ];
-
 function Store() {
+  const videoref = useRef<HTMLVideoElement>(null);
+
+  const handleLoad = () => {
+    videoref.current?.play();
+  };
+
   return (
     <>
       <Grid container>
@@ -61,6 +67,8 @@ function Store() {
                   autoPlay
                   loop
                   muted
+                  ref={videoref}
+                  onLoad={handleLoad}
                 />
               </Grid>
               <Grid size={{ xs: 12, sm: 4 }} padding={"20px"}>
