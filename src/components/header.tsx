@@ -449,6 +449,7 @@ function Header(props: { set: (value: boolean) => void }) {
                 fontSize="32px"
                 textAlign={"center"}
                 letterSpacing="24%"
+                sx={{ cursor: "pointer" }}
               >
                 SAGH
               </Typography>
