@@ -6,7 +6,7 @@ function Navs(props: { set: (value: boolean) => void }) {
   return (
     <>
       <Header set={props.set} />
-      <Grid container width={"87vw"}>
+      <Grid container width={"97vw"}>
         <Outlet />
       </Grid>
     </>
