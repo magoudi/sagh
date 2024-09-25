@@ -37,7 +37,7 @@ function Store() {
 
   return (
     <>
-      <Grid container>
+      <Grid container width={"100vw"}>
         <Grid size={12}>
           <CardMedia
             image={logo}
