@@ -39,7 +39,12 @@ function Store() {
     <>
       <Grid container>
         <Grid size={12}>
-          <CardMedia image={logo} component="img" height={800} />
+          <CardMedia
+            image={logo}
+            component="img"
+            height={800}
+            width={"100vw"}
+          />
         </Grid>
         <Grid size={12} textAlign={"center"} margin={"40px"}>
           <Typography
