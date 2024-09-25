@@ -250,7 +250,7 @@ const Signup = (props: FormikProps<signupmodel>) => {
   const navigate = useNavigate();
   return (
     <Form>
-      <Grid container rowSpacing={"10px"}>
+      <Grid container>
         <Grid size={{ xs: 0, sm: 1, md: 2 }} />
         <Grid size={{ xs: 12, sm: 10, md: 8 }} textAlign={"center"}>
           <Typography
